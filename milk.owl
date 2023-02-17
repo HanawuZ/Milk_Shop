@@ -6,7 +6,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:milk="http://www.drink.org/milk/#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:milk1="http://www.drink.org/milk/">
     <owl:Ontology rdf:about="http://www.drink.org/milk/"/>
     
 
@@ -19,6 +20,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.drink.org/milk/hasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.drink.org/milk/hasType">
+        <rdfs:domain rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdfs:range rdf:resource="http://www.drink.org/milk/#Type"/>
+    </owl:ObjectProperty>
     
 
 
@@ -290,6 +300,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/chitralada_chocolate_milk">
         <rdf:type rdf:resource="http://www.drink.org/milk/#chitralada"/>
+        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
         <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#200_ml"/>
         <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
         <milk:hasTaste rdf:resource="http://www.drink.org/milk/#chocolate"/>
