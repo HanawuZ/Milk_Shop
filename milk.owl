@@ -1,13 +1,12 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/jajar/ontologies/2566/0/untitled-ontology-7#"
-     xml:base="http://www.semanticweb.org/jajar/ontologies/2566/0/untitled-ontology-7"
+<rdf:RDF xmlns="http://www.drink.org/milk/"
+     xml:base="http://www.drink.org/milk/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:milk="http://www.drink.org/milk/#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:milk1="http://www.drink.org/milk/">
+     xmlns:milk="http://www.drink.org/milk/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.drink.org/milk/"/>
     
 
@@ -15,7 +14,7 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Object Properties
+    // Annotation properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
@@ -23,48 +22,9 @@
     
 
 
-    <!-- http://www.drink.org/milk/hasType -->
+    <!-- http://www.drink.org/milk/name -->
 
-    <owl:ObjectProperty rdf:about="http://www.drink.org/milk/hasType">
-        <rdfs:domain rdf:resource="http://www.drink.org/milk/#Brand"/>
-        <rdfs:range rdf:resource="http://www.drink.org/milk/#Type"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.drink.org/milk/#hasBrand -->
-
-    <owl:ObjectProperty rdf:about="http://www.drink.org/milk/#hasBrand">
-        <rdfs:domain rdf:resource="http://www.drink.org/milk/#Milk"/>
-        <rdfs:range rdf:resource="http://www.drink.org/milk/#Brand"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.drink.org/milk/#hasProduct_Detail -->
-
-    <owl:ObjectProperty rdf:about="http://www.drink.org/milk/#hasProduct_Detail">
-        <rdfs:domain rdf:resource="http://www.drink.org/milk/#Milk"/>
-        <rdfs:range rdf:resource="http://www.drink.org/milk/#Litre"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.drink.org/milk/#hasProduct_From -->
-
-    <owl:ObjectProperty rdf:about="http://www.drink.org/milk/#hasProduct_From">
-        <rdfs:domain rdf:resource="http://www.drink.org/milk/#Milk"/>
-        <rdfs:range rdf:resource="http://www.drink.org/milk/#ProductFrom"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.drink.org/milk/#hasTaste -->
-
-    <owl:ObjectProperty rdf:about="http://www.drink.org/milk/#hasTaste">
-        <rdfs:domain rdf:resource="http://www.drink.org/milk/#Milk"/>
-        <rdfs:range rdf:resource="http://www.drink.org/milk/#Taste"/>
-    </owl:ObjectProperty>
+    <owl:AnnotationProperty rdf:about="http://www.drink.org/milk/name"/>
     
 
 
@@ -83,6 +43,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#Alcohol">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdfs:label>Alcohol</rdfs:label>
     </owl:Class>
     
 
@@ -91,6 +52,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#Brand">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdfs:label>Brand</rdfs:label>
     </owl:Class>
     
 
@@ -99,13 +61,16 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#Disinfection">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Milk"/>
+        <rdfs:label>Disinfection</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.drink.org/milk/#Drink -->
 
-    <owl:Class rdf:about="http://www.drink.org/milk/#Drink"/>
+    <owl:Class rdf:about="http://www.drink.org/milk/#Drink">
+        <rdfs:label>Drink</rdfs:label>
+    </owl:Class>
     
 
 
@@ -113,6 +78,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#Fruit">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdfs:label>Fruit</rdfs:label>
     </owl:Class>
     
 
@@ -121,6 +87,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#Litre">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Product_Detail"/>
+        <rdfs:label>Litre</rdfs:label>
     </owl:Class>
     
 
@@ -129,6 +96,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#Milk">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdfs:label>Milk</rdfs:label>
     </owl:Class>
     
 
@@ -137,6 +105,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#Mmilk">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdfs:label>Mmilk</rdfs:label>
     </owl:Class>
     
 
@@ -145,6 +114,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#ProductFrom">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdfs:label>ProductFrom</rdfs:label>
     </owl:Class>
     
 
@@ -153,6 +123,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#Product_Detail">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#ProductFrom"/>
+        <rdfs:label>Product_Detail</rdfs:label>
     </owl:Class>
     
 
@@ -161,6 +132,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#Product_Type">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#ProductFrom"/>
+        <rdfs:label>Product_Type</rdfs:label>
     </owl:Class>
     
 
@@ -169,6 +141,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#Sparking_water">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdfs:label>Sparking_water</rdfs:label>
     </owl:Class>
     
 
@@ -177,6 +150,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#Taste">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdfs:label>Taste</rdfs:label>
     </owl:Class>
     
 
@@ -185,6 +159,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#Type">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Milk"/>
+        <rdfs:label>Type</rdfs:label>
     </owl:Class>
     
 
@@ -193,6 +168,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#animal">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Type"/>
+        <rdfs:label>animal</rdfs:label>
     </owl:Class>
     
 
@@ -201,6 +177,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#chitralada">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdfs:label>chitralada</rdfs:label>
     </owl:Class>
     
 
@@ -209,6 +186,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#dutch_milk">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdfs:label>dutch_milk</rdfs:label>
     </owl:Class>
     
 
@@ -217,6 +195,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#foremost">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdfs:label>foremost</rdfs:label>
     </owl:Class>
     
 
@@ -225,6 +204,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#meji">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdfs:label>meji</rdfs:label>
     </owl:Class>
     
 
@@ -233,6 +213,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#murrah">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdfs:label>murrah</rdfs:label>
     </owl:Class>
     
 
@@ -241,6 +222,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#nestle">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdfs:label>nestle</rdfs:label>
     </owl:Class>
     
 
@@ -249,6 +231,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#nongpho">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdfs:label>nongpho</rdfs:label>
     </owl:Class>
     
 
@@ -257,6 +240,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#plant">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Type"/>
+        <rdfs:label>plant</rdfs:label>
     </owl:Class>
     
 
@@ -265,6 +249,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#sirichai">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdfs:label>sirichai</rdfs:label>
     </owl:Class>
     
 
@@ -273,6 +258,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#thai_denmark">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdfs:label>thai_denmark</rdfs:label>
     </owl:Class>
     
 
@@ -281,6 +267,7 @@
 
     <owl:Class rdf:about="http://www.drink.org/milk/#yana_farm">
         <rdfs:subClassOf rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdfs:label>yana_farm</rdfs:label>
     </owl:Class>
     
 
@@ -299,11 +286,11 @@
     <!-- http://www.drink.org/milk/chitralada_chocolate_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/chitralada_chocolate_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#chitralada"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#200_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#chocolate"/>
+        <name>chitralada_chocolate_milk</name>
     </owl:NamedIndividual>
     
 
@@ -311,11 +298,11 @@
     <!-- http://www.drink.org/milk/chitralada_strawberry_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/chitralada_strawberry_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#chitralada"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#200_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#strawberry"/>
+        <name>chitralada_strawberry_milk</name>
     </owl:NamedIndividual>
     
 
@@ -323,11 +310,11 @@
     <!-- http://www.drink.org/milk/chitralada_sweet_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/chitralada_sweet_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#chitralada"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#200_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#sweet"/>
+        <name>chitralada_sweet_milk</name>
     </owl:NamedIndividual>
     
 
@@ -335,11 +322,11 @@
     <!-- http://www.drink.org/milk/chitralada_white_malt_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/chitralada_white_malt_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#chitralada"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#200_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#white_malt"/>
+        <name>chitralada_white_malt_milk</name>
     </owl:NamedIndividual>
     
 
@@ -347,11 +334,11 @@
     <!-- http://www.drink.org/milk/dutch_milk_white_malt_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/dutch_milk_white_malt_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#dutch_milk"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#2_liter"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#bottle"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#white_malt"/>
+        <name>dutch_milk_white_malt_milk</name>
     </owl:NamedIndividual>
     
 
@@ -359,11 +346,11 @@
     <!-- http://www.drink.org/milk/murrah_chocolate_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/murrah_chocolate_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#murrah"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#buffalo"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#180_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#bottle"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#chocolate"/>
+        <name>murrah_chocolate_milk</name>
     </owl:NamedIndividual>
     
 
@@ -371,11 +358,11 @@
     <!-- http://www.drink.org/milk/murrah_nature_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/murrah_nature_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#murrah"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#buffalo"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#180_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#bottle"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#nature"/>
+        <name>murrah_nature_milk</name>
     </owl:NamedIndividual>
     
 
@@ -383,11 +370,11 @@
     <!-- http://www.drink.org/milk/murrah_strawberry_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/murrah_strawberry_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#murrah"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#buffalo"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#180_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#bottle"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#strawberry"/>
+        <name>murrah_strawberry_milk</name>
     </owl:NamedIndividual>
     
 
@@ -395,11 +382,11 @@
     <!-- http://www.drink.org/milk/murrah_sweet_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/murrah_sweet_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#murrah"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#buffalo"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#180_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#bottle"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#sweet"/>
+        <name>murrah_sweet_milk</name>
     </owl:NamedIndividual>
     
 
@@ -407,11 +394,11 @@
     <!-- http://www.drink.org/milk/murrah_white_malt_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/murrah_white_malt_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#murrah"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#buffalo"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#180_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#bottle"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#white_malt"/>
+        <name>murrah_white_malt_milk</name>
     </owl:NamedIndividual>
     
 
@@ -420,6 +407,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#DHT">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Disinfection"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
+        <name>DHT</name>
     </owl:NamedIndividual>
     
 
@@ -427,11 +417,11 @@
     <!-- http://www.drink.org/milk/#Mmilk_nature_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#Mmilk_nature_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Mmilk"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#1_liter"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#nature"/>
+        <name>Mmilk_nature_milk</name>
     </owl:NamedIndividual>
     
 
@@ -439,7 +429,11 @@
     <!-- http://www.drink.org/milk/#almonds -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#almonds">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Type"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#plant"/>
+        <name>almonds</name>
     </owl:NamedIndividual>
     
 
@@ -447,7 +441,10 @@
     <!-- http://www.drink.org/milk/#bottle -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#bottle">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#ProductFrom"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Product_Type"/>
+        <name>bottle</name>
     </owl:NamedIndividual>
     
 
@@ -455,7 +452,10 @@
     <!-- http://www.drink.org/milk/#box -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#box">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#ProductFrom"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Product_Type"/>
+        <name>box</name>
     </owl:NamedIndividual>
     
 
@@ -463,7 +463,11 @@
     <!-- http://www.drink.org/milk/#buffalo -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#buffalo">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Type"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#animal"/>
+        <name>buffalo</name>
     </owl:NamedIndividual>
     
 
@@ -471,11 +475,11 @@
     <!-- http://www.drink.org/milk/#chitralada_nature_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#chitralada_nature_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#chitralada"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#200_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#nature"/>
+        <name>chitralada_nature_milk</name>
     </owl:NamedIndividual>
     
 
@@ -483,7 +487,9 @@
     <!-- http://www.drink.org/milk/#chocolate -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#chocolate">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Taste"/>
+        <name>chocolate</name>
     </owl:NamedIndividual>
     
 
@@ -491,7 +497,11 @@
     <!-- http://www.drink.org/milk/#corn -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#corn">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Type"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#plant"/>
+        <name>corn</name>
     </owl:NamedIndividual>
     
 
@@ -499,7 +509,12 @@
     <!-- http://www.drink.org/milk/#cow -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#cow">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Taste"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Type"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#animal"/>
+        <name>cow</name>
     </owl:NamedIndividual>
     
 
@@ -507,12 +522,11 @@
     <!-- http://www.drink.org/milk/#dutch_milk_chocolate_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#dutch_milk_chocolate_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#dutch_milk"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#830_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#bottle"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#chocolate"/>
+        <name>dutch_milk_chocolate_milk</name>
     </owl:NamedIndividual>
     
 
@@ -520,11 +534,11 @@
     <!-- http://www.drink.org/milk/#dutch_milk_nature_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#dutch_milk_nature_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#dutch_milk"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#1_liter"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#bottle"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#nature"/>
+        <name>dutch_milk_nature_milk</name>
     </owl:NamedIndividual>
     
 
@@ -532,11 +546,11 @@
     <!-- http://www.drink.org/milk/#dutch_milk_strawberry_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#dutch_milk_strawberry_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#dutch_milk"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#180_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#strawberry"/>
+        <name>dutch_milk_strawberry_milk</name>
     </owl:NamedIndividual>
     
 
@@ -544,11 +558,11 @@
     <!-- http://www.drink.org/milk/#dutch_milk_sweet_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#dutch_milk_sweet_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#dutch_milk"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#180_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#sweet"/>
+        <name>dutch_milk_sweet_milk</name>
     </owl:NamedIndividual>
     
 
@@ -556,11 +570,11 @@
     <!-- http://www.drink.org/milk/#foremost_chocolate_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#foremost_chocolate_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#foremost"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#230_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#chocolate"/>
+        <name>foremost_chocolate_milk</name>
     </owl:NamedIndividual>
     
 
@@ -568,11 +582,11 @@
     <!-- http://www.drink.org/milk/#foremost_nature_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#foremost_nature_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#foremost"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#230_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#nature"/>
+        <name>foremost_nature_milk</name>
     </owl:NamedIndividual>
     
 
@@ -580,11 +594,11 @@
     <!-- http://www.drink.org/milk/#foremost_strawberry_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#foremost_strawberry_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#foremost"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#230_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#strawberry"/>
+        <name>foremost_strawberry_milk</name>
     </owl:NamedIndividual>
     
 
@@ -592,11 +606,11 @@
     <!-- http://www.drink.org/milk/#foremost_sweet_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#foremost_sweet_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#foremost"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#230_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#sweet"/>
+        <name>foremost_sweet_milk</name>
     </owl:NamedIndividual>
     
 
@@ -604,7 +618,11 @@
     <!-- http://www.drink.org/milk/#goat -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#goat">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Type"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#animal"/>
+        <name>goat</name>
     </owl:NamedIndividual>
     
 
@@ -612,11 +630,11 @@
     <!-- http://www.drink.org/milk/#meji_chocolate_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#meji_chocolate_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#meji"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#1_liter"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#bottle"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#chocolate"/>
+        <name>meji_chocolate_milk</name>
     </owl:NamedIndividual>
     
 
@@ -624,11 +642,11 @@
     <!-- http://www.drink.org/milk/#meji_nature_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#meji_nature_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#meji"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#1_liter"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#bottle"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#nature"/>
+        <name>meji_nature_milk</name>
     </owl:NamedIndividual>
     
 
@@ -636,11 +654,11 @@
     <!-- http://www.drink.org/milk/#meji_stawberry_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#meji_stawberry_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#meji"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#230_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#bottle"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#strawberry"/>
+        <name>meji_stawberry_milk</name>
     </owl:NamedIndividual>
     
 
@@ -648,11 +666,11 @@
     <!-- http://www.drink.org/milk/#meji_sweet_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#meji_sweet_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#meji"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#230_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#bottle"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#sweet"/>
+        <name>meji_sweet_milk</name>
     </owl:NamedIndividual>
     
 
@@ -660,7 +678,9 @@
     <!-- http://www.drink.org/milk/#nature -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#nature">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Taste"/>
+        <name>nature</name>
     </owl:NamedIndividual>
     
 
@@ -668,11 +688,11 @@
     <!-- http://www.drink.org/milk/#nestle_chocolate_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#nestle_chocolate_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#nestle"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#200_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#chocolate"/>
+        <name>nestle_chocolate_milk</name>
     </owl:NamedIndividual>
     
 
@@ -680,11 +700,11 @@
     <!-- http://www.drink.org/milk/#nestle_nature_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#nestle_nature_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#nestle"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#200_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#nature"/>
+        <name>nestle_nature_milk</name>
     </owl:NamedIndividual>
     
 
@@ -692,11 +712,11 @@
     <!-- http://www.drink.org/milk/#nestle_strawberry_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#nestle_strawberry_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#nestle"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#200_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#strawberry"/>
+        <name>nestle_strawberry_milk</name>
     </owl:NamedIndividual>
     
 
@@ -704,11 +724,11 @@
     <!-- http://www.drink.org/milk/#nestle_sweet_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#nestle_sweet_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#nestle"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#200_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#sweet"/>
+        <name>nestle_sweet_milk</name>
     </owl:NamedIndividual>
     
 
@@ -716,11 +736,11 @@
     <!-- http://www.drink.org/milk/#nongpho_chocolate_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#nongpho_chocolate_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#nongpho"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#230_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#chocolate"/>
+        <name>nongpho_chocolate_milk</name>
     </owl:NamedIndividual>
     
 
@@ -728,11 +748,11 @@
     <!-- http://www.drink.org/milk/#nongpho_nature_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#nongpho_nature_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#nongpho"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#230_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#nature"/>
+        <name>nongpho_nature_milk</name>
     </owl:NamedIndividual>
     
 
@@ -740,11 +760,11 @@
     <!-- http://www.drink.org/milk/#nongpho_strawberry_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#nongpho_strawberry_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#nongpho"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#230_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#strawberry"/>
+        <name>nongpho_strawberry_milk</name>
     </owl:NamedIndividual>
     
 
@@ -752,11 +772,11 @@
     <!-- http://www.drink.org/milk/#nongpho_sweet_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#nongpho_sweet_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#nongpho"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#230_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#sweet"/>
+        <name>nongpho_sweet_milk</name>
     </owl:NamedIndividual>
     
 
@@ -765,6 +785,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#pasteurization">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Disinfection"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
+        <name>pasteurization</name>
     </owl:NamedIndividual>
     
 
@@ -772,7 +795,11 @@
     <!-- http://www.drink.org/milk/#sheep -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#sheep">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Type"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#animal"/>
+        <name>sheep</name>
     </owl:NamedIndividual>
     
 
@@ -780,11 +807,11 @@
     <!-- http://www.drink.org/milk/#sirichai_nuture_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#sirichai_nuture_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#sirichai"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#goat"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#830_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#bottle"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#nature"/>
+        <name>sirichai_nuture_milk</name>
     </owl:NamedIndividual>
     
 
@@ -792,7 +819,11 @@
     <!-- http://www.drink.org/milk/#soy -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#soy">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Type"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#plant"/>
+        <name>soy</name>
     </owl:NamedIndividual>
     
 
@@ -801,6 +832,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#sterilization">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Disinfection"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
+        <name>sterilization</name>
     </owl:NamedIndividual>
     
 
@@ -808,7 +842,9 @@
     <!-- http://www.drink.org/milk/#strawberry -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#strawberry">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Taste"/>
+        <name>strawberry</name>
     </owl:NamedIndividual>
     
 
@@ -816,7 +852,9 @@
     <!-- http://www.drink.org/milk/#sweet -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#sweet">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Taste"/>
+        <name>sweet</name>
     </owl:NamedIndividual>
     
 
@@ -824,11 +862,11 @@
     <!-- http://www.drink.org/milk/#thai_denmark_chocolate_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#thai_denmark_chocolate_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#thai_denmark"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#180_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#chocolate"/>
+        <name>thai_denmark_chocolate_milk</name>
     </owl:NamedIndividual>
     
 
@@ -836,11 +874,11 @@
     <!-- http://www.drink.org/milk/#thai_denmark_nature_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#thai_denmark_nature_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#thai_denmark"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#180_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#nature"/>
+        <name>thai_denmark_nature_milk</name>
     </owl:NamedIndividual>
     
 
@@ -848,11 +886,11 @@
     <!-- http://www.drink.org/milk/#thai_denmark_sweet_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#thai_denmark_sweet_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#thai_denmark"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#cow"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#180_ml"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#box"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#sweet"/>
+        <name>thai_denmark_sweet_milk</name>
     </owl:NamedIndividual>
     
 
@@ -860,7 +898,11 @@
     <!-- http://www.drink.org/milk/#wheat -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#wheat">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Type"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#plant"/>
+        <name>wheat</name>
     </owl:NamedIndividual>
     
 
@@ -868,7 +910,9 @@
     <!-- http://www.drink.org/milk/#white_malt -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#white_malt">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Taste"/>
+        <name>white_malt</name>
     </owl:NamedIndividual>
     
 
@@ -876,11 +920,11 @@
     <!-- http://www.drink.org/milk/#yana_nature_milk -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#yana_nature_milk">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Brand"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Milk"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#yana_farm"/>
-        <milk1:hasType rdf:resource="http://www.drink.org/milk/#goat"/>
-        <milk:hasProduct_Detail rdf:resource="http://www.drink.org/milk/#2_liter"/>
-        <milk:hasProduct_From rdf:resource="http://www.drink.org/milk/#bottle"/>
-        <milk:hasTaste rdf:resource="http://www.drink.org/milk/#nature"/>
+        <name>yana_nature_milk</name>
     </owl:NamedIndividual>
     
 
@@ -888,7 +932,11 @@
     <!-- http://www.drink.org/milk/#1_liter -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#1_liter">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#ProductFrom"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Product_Detail"/>
+        <name>1_liter</name>
     </owl:NamedIndividual>
     
 
@@ -896,7 +944,11 @@
     <!-- http://www.drink.org/milk/#180_ml -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#180_ml">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#ProductFrom"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Product_Detail"/>
+        <name>180_ml</name>
     </owl:NamedIndividual>
     
 
@@ -904,7 +956,11 @@
     <!-- http://www.drink.org/milk/#2_liter -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#2_liter">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#ProductFrom"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Product_Detail"/>
+        <name>2_liter</name>
     </owl:NamedIndividual>
     
 
@@ -912,7 +968,11 @@
     <!-- http://www.drink.org/milk/#200_ml -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#200_ml">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#ProductFrom"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Product_Detail"/>
+        <name>200_ml</name>
     </owl:NamedIndividual>
     
 
@@ -920,7 +980,11 @@
     <!-- http://www.drink.org/milk/#230_ml -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#230_ml">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#ProductFrom"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Product_Detail"/>
+        <name>230_ml</name>
     </owl:NamedIndividual>
     
 
@@ -928,7 +992,11 @@
     <!-- http://www.drink.org/milk/#450_ml -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#450_ml">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#ProductFrom"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Product_Detail"/>
+        <name>450_ml</name>
     </owl:NamedIndividual>
     
 
@@ -936,7 +1004,11 @@
     <!-- http://www.drink.org/milk/#5_liter -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#5_liter">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#ProductFrom"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Product_Detail"/>
+        <name>5_liter</name>
     </owl:NamedIndividual>
     
 
@@ -944,7 +1016,11 @@
     <!-- http://www.drink.org/milk/#830_ml -->
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#830_ml">
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Drink"/>
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#ProductFrom"/>
+        <rdf:type rdf:resource="http://www.drink.org/milk/#Product_Detail"/>
+        <name>830_ml</name>
     </owl:NamedIndividual>
 </rdf:RDF>
 
