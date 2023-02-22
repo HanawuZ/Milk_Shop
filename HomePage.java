@@ -13,6 +13,7 @@ import javax.swing.SwingUtilities;
 
 import java.awt.SystemColor;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JComponent;
 
 import java.awt.event.ActionListener;
@@ -37,6 +38,7 @@ import javax.swing.UIManager;
 public class HomePage extends JFrame {
 
 	private JPanel contentPane;
+	private Menu menuPage;
 
 
 	private void LabelSetting(JPanel contentPane) {
@@ -75,10 +77,10 @@ public class HomePage extends JFrame {
 		JButton VisitShopButton = new JButton("Visit Shop");
 		VisitShopButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				DisplayFrame page = new DisplayFrame();
 				
+				menuPage = new Menu();
 				 // Show the new page and hide the current page
-		        page.setVisible(true);
+				menuPage.setVisible(true);
 		        setVisible(false);
 			}
 		});
@@ -93,12 +95,11 @@ public class HomePage extends JFrame {
 		CloseButton.setBorderPainted(false);
 		CloseButton.setBounds(655, 382, 175, 57);
 		CloseButton.addActionListener(new ActionListener() {
-	            public void actionPerformed(ActionEvent e) {
-	                SwingUtilities.getWindowAncestor(contentPane).dispose();
-	            }
-	        });
+			public void actionPerformed(ActionEvent e) {
+				SwingUtilities.getWindowAncestor(contentPane).dispose();
+			}
+		});
 		contentPane.add(CloseButton);
-		
 	}
 
 	/**
@@ -124,7 +125,7 @@ public class HomePage extends JFrame {
 	public HomePage(){
 		setTitle("Milk Shop");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1280, 720);
+		setBounds(0, 0, 1280, 720);
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.activeCaption);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -139,18 +140,18 @@ public class HomePage extends JFrame {
 		Color bgColor = new Color(255, 255, 255, 128); // create a color with 50% opacity
 		WhiteOpacityBackground.setBackground(bgColor); // set the background color of the panel
 
-		WhiteOpacityBackground.setBounds(0, 0, 1266, 484);
+		WhiteOpacityBackground.setBounds(0, 0, 1280, 484);
 		contentPane.add(WhiteOpacityBackground);
-
+		
 		JLabel HomePageBackground = new JLabel("");
 		HomePageBackground.setIcon(new ImageIcon("C:\\Users\\asus\\Desktop\\SEMENTIC-WEBS\\Images\\Milk_background3.jpg"));
-		HomePageBackground.setBounds(0, 0, 1266, 484);
+		HomePageBackground.setBounds(0, 0, 1280, 484);
 
 		contentPane.add(HomePageBackground);
 		
 		JPanel FooterPanel = new JPanel();
 		FooterPanel.setBackground(Color.GRAY);
-		FooterPanel.setBounds(0, 481, 1280, 720);
+		FooterPanel.setBounds(0,0, 1280, 720);
 		contentPane.add(FooterPanel);
 
 		
