@@ -1,4 +1,4 @@
-package main;
+package UI;
 
 import java.awt.EventQueue;
 
@@ -21,22 +21,11 @@ import javax.swing.JButton;
 public class SelectType extends JFrame {
 
 	private JPanel contentPane;
+	private String milk_type;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					SelectType frame = new SelectType();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
@@ -44,7 +33,7 @@ public class SelectType extends JFrame {
 	public SelectType() {
 		setTitle("SelectType");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 620, 426);
+		setBounds(0, 0, 620, 426);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -119,7 +108,7 @@ public class SelectType extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				JRadioButton plantButton = (JRadioButton) e.getSource();
 				if (plantButton.isSelected()) {
-					System.out.println("ควาย");
+					milk_type = "buffalo";
 					AnimalRadioButton.setSelected(false);
 					AnimalRadioButton_2.setSelected(false);
 					AnimalRadioButton_2_1.setSelected(false);
@@ -133,7 +122,7 @@ public class SelectType extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				JRadioButton plantButton = (JRadioButton) e.getSource();
 				if (plantButton.isSelected()) {
-					System.out.println("วัว");
+					milk_type = "cow";
 					AnimalRadioButton_1.setSelected(false);
 					AnimalRadioButton_2.setSelected(false);
 					AnimalRadioButton_2_1.setSelected(false);
@@ -145,7 +134,7 @@ public class SelectType extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				JRadioButton plantButton = (JRadioButton) e.getSource();
 				if (plantButton.isSelected()) {
-					System.out.println("แพะ");
+					milk_type = "goat";
 					AnimalRadioButton.setSelected(false);
 					AnimalRadioButton_1.setSelected(false);
 					AnimalRadioButton_2_1.setSelected(false);
@@ -156,7 +145,7 @@ public class SelectType extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				JRadioButton plantButton = (JRadioButton) e.getSource();
 				if (plantButton.isSelected()) {
-					System.out.println("แกะ");
+					milk_type = "sheep";
 					AnimalRadioButton.setSelected(false);
 					AnimalRadioButton_1.setSelected(false);
 					AnimalRadioButton_2.setSelected(false);
@@ -200,6 +189,16 @@ public class SelectType extends JFrame {
 		btnNewButton.setBackground(new Color(102, 153, 255));
 		btnNewButton.setBounds(511, 204, 85, 21);
 		animal.add(btnNewButton);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				DIsinfectionSelect disinfection_select_page = new DIsinfectionSelect(milk_type);
+				
+				
+				 // Show the new page and hide the current page
+		        disinfection_select_page.setVisible(true);
+		        setVisible(false);
+			}
+		});
 
 		animal.setVisible(false);
 		
@@ -253,6 +252,7 @@ public class SelectType extends JFrame {
 				JRadioButton plantButton = (JRadioButton) e.getSource();
 				if (plantButton.isSelected()) {
 					System.out.println("Almond");
+					milk_type = "almond";
 					plantRadioButton.setSelected(false);
 					plantRadioButton_2.setSelected(false);
 					plantRadioButton_3.setSelected(false);
@@ -267,6 +267,8 @@ public class SelectType extends JFrame {
 				JRadioButton plantButton = (JRadioButton) e.getSource();
 				if (plantButton.isSelected()) {
 					System.out.println("Corn");
+					milk_type = "corn";
+
 					plantRadioButton_1.setSelected(false);
 					plantRadioButton_2.setSelected(false);
 					plantRadioButton_3.setSelected(false);
@@ -279,6 +281,8 @@ public class SelectType extends JFrame {
 				JRadioButton plantButton = (JRadioButton) e.getSource();
 				if (plantButton.isSelected()) {
 					System.out.println("Soy");
+					milk_type = "soy";
+
 					plantRadioButton.setSelected(false);
 					plantRadioButton_1.setSelected(false);
 					plantRadioButton_3.setSelected(false);
@@ -290,6 +294,8 @@ public class SelectType extends JFrame {
 				JRadioButton plantButton = (JRadioButton) e.getSource();
 				if (plantButton.isSelected()) {
 					System.out.println("Wheat");
+					milk_type = "wheat";
+
 					plantRadioButton.setSelected(false);
 					plantRadioButton_1.setSelected(false);
 					plantRadioButton_2.setSelected(false);
@@ -329,6 +335,17 @@ public class SelectType extends JFrame {
 		NextButton.setBackground(new Color(102, 153, 255));
 		NextButton.setBounds(511, 204, 85, 21);
 		plant.add(NextButton);
+		
+		NextButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				DIsinfectionSelect disinfection_select_page = new DIsinfectionSelect(milk_type);
+				
+				
+				 // Show the new page and hide the current page
+		        disinfection_select_page.setVisible(true);
+		        setVisible(false);
+			}
+		});
 
 		plant.setVisible(false);
 		PlantButton.addActionListener(new ActionListener() {
@@ -340,7 +357,6 @@ public class SelectType extends JFrame {
 		        	animal.setVisible(false);
 		            // do something if check box is selected
 		        
-		        	System.out.println("0");
 		            // check box is unselected, do something else
 		        
 				
