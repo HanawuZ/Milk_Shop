@@ -1,4 +1,4 @@
-package main;
+package UI;
 
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -64,15 +64,26 @@ public class SelectProductFrom extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
+		
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(153, 204, 255));
+		panel.setBounds(-13, 46, 445, 25);
+		contentPane.add(panel);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(153, 204, 255));
+		panel_1.setBounds(864, 46, 445, 25);
+		contentPane.add(panel_1);
+
 		
 		textField_1 = new JTextField();
 		textField_1.setEditable(false);
 		textField_1.setFont(new Font("Tahoma", Font.BOLD, 30));
 		textField_1.setText("กรุณาเลือกรูปแบบผลิตภัณท์");
-		textField_1.setBounds(442, 34, 400, 52);
+		textField_1.setBounds(442, 32, 400, 52);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
@@ -108,7 +119,7 @@ public class SelectProductFrom extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				JRadioButton Button = (JRadioButton) e.getSource();
 				if (Button.isSelected()) {
-					product_form = "bootle";
+					product_form = "bottle";
 					rdbtnNewRadioButton_2.setSelected(false);
 				}
 			}
@@ -118,15 +129,7 @@ public class SelectProductFrom extends JFrame {
 		milkbottle.setBounds(328, 237, 330, 311);
 		contentPane.add(milkbottle);
 		//milkbottle.setIcon(new ImageIcon("C:\\Users\\Jajar\\Downloads\\milkbottle .jpg"));
-		milkbottle.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\Jajar\\Documents\\Learning\\SEMETIC\\bottle.jpg").getImage().getScaledInstance(milkbottle.getWidth(), milkbottle.getHeight(), Image.SCALE_DEFAULT)));
-
-		
-		
-		
-		JLabel milkbox = new JLabel("");
-		milkbox.setBounds(739, 243, 147, 305);
-		contentPane.add(milkbox);
-		milkbox.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\Jajar\\Downloads\\milkbox.jpg").getImage().getScaledInstance(milkbox.getWidth(), milkbox.getHeight(), Image.SCALE_DEFAULT)));
+		milkbottle.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\asus\\Desktop\\SEMENTIC-WEBS\\Images\\bottle.jpg").getImage().getScaledInstance(milkbottle.getWidth(), milkbottle.getHeight(), Image.SCALE_DEFAULT)));
 
 		JButton NextButton = new JButton("Next");
 		NextButton.setForeground(new Color(255, 255, 255));
@@ -150,17 +153,21 @@ public class SelectProductFrom extends JFrame {
 				setVisible(false);
 			}
 		});
-		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Jajar\\Documents\\Learning\\SEMETIC\\White_Background_(To_id_screen_dust_during_cleanup).jpg"));
+		JLabel MilkBox = new JLabel("New label");
+		MilkBox.setBounds(746, 237, 191, 311);
+		contentPane.add(MilkBox);
+		MilkBox.setIcon(new ImageIcon("C:\\Users\\asus\\Desktop\\SEMENTIC-WEBS\\Images\\milkbox .jpg"));
+
+		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setBounds(273, 131, 747, 444);
 		contentPane.add(lblNewLabel_1);
 		JLabel lblNewLabel = new JLabel("New label");
-		//lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Jajar\\Documents\\Learning\\SEMETIC\\332465334_877477716820255_1258945671494977046_n.jpg"));
-		milkbox.setIcon(new ImageIcon("C:\\Users\\Jajar\\Downloads\\milkbox .jpg"));
 		lblNewLabel.setBounds(0, 0, 1280, 717);
 		contentPane.add(lblNewLabel);
-		lblNewLabel.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\Jajar\\Documents\\Learning\\SEMETIC\\a923762fe695158722275a52f3bd6ba8.jpg").getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_DEFAULT)));
+		lblNewLabel.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\asus\\Desktop\\SEMENTIC-WEBS\\Images\\a923762fe695158722275a52f3bd6ba8.jpg").getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_DEFAULT)));
+		
+
+		
 		
 		
 		

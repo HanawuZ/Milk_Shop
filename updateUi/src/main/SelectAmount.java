@@ -1,4 +1,4 @@
-package main;
+package UI;
 
 import java.awt.EventQueue;
 
@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
+import java.awt.Color;
 
 public class SelectAmount extends JFrame {
 
@@ -45,47 +46,7 @@ public class SelectAmount extends JFrame {
 	 * Create the frame.
 	 */
 	private void SelectMilk(){
-		String disinfection_format = String.format("milk:%s;", disinfection_type);
-		String type_format = String.format("milk:%s;", milk_type);
-		String product_detail_format = String.format("milk:%s;", amount);
-		String product_form_format = String.format("milk:%s;", product_form);
-
-//		queryString = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
-//        		+ "PREFIX owl: <http://www.w3.org/2002/07/owl#>" 
-//        		+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
-//        		+ "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>"
-//        		+ "PREFIX milk: <http://www.drink.org/milk/#>"
-//        		+ "PREFIX milk1: <http://www.drink.org/milk/>"
-//        		+ "SELECT (str(?name) as ?Name)"
-//        		+ "WHERE { ?x rdf:type milk:chitralada;"
-//        		+ "milk1:hasDisinfection milk:UHT;"
-//        		+ "milk1:hasType milk:cow;"
-//        		+ "milk:hasProduct_Detail milk:200_ml;"
-//        		+ "milk:hasTaste milk:nature;"
-//        		+ "rdfs:label ?name. }";
 		
-		queryString = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
-        		+ "PREFIX owl: <http://www.w3.org/2002/07/owl#>" 
-        		+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
-        		+ "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>"
-        		+ "PREFIX milk: <http://www.drink.org/milk/#>"
-        		+ "PREFIX milk1: <http://www.drink.org/milk/>"
-        		+ "SELECT (str(?name) as ?Name)"
-        		+ "WHERE { ?x rdf:type milk:chitralada;"
-        		+ "milk1:hasDisinfection "+disinfection_format
-        		+ "milk1:hasType "+type_format
-        		+ "milk:hasProduct_Detail "+product_detail_format
-        		+ "milk:hasTaste milk:nature;"
-        		+ "rdfs:label ?name. }";
-		
-        org.apache.jena.query.ResultSet results = OpenOWL_milk.ExecSparQlMilk(queryString); //all method ExecSparQl from OpenOWL class
-        while (results.hasNext()) {
-        	
-            QuerySolution soln = results.nextSolution();
-            String Milk_individual = soln.getLiteral("Name").getString();
-            
-             System.out.println("Milk: " + Milk_individual.toString()); 
-        }
 	}
 	
 	public SelectAmount(String milk_type, String disinfection_type, String product_form) {
@@ -100,10 +61,19 @@ public class SelectAmount extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(153, 204, 255));
+		panel.setBounds(-72, 27, 537, 22);
+		contentPane.add(panel);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(153, 204, 255));
+		panel_1.setBounds(846, 27, 537, 22);
+		contentPane.add(panel_1);
 		
 		JLabel Product_Detail_Label = new JLabel("กรุณาเลือกปริมาณ");
 		Product_Detail_Label.setFont(new Font("Tahoma", Font.BOLD, 40));
-		Product_Detail_Label.setBounds(475, 10, 361, 49);
+		Product_Detail_Label.setBounds(486, 10, 361, 49);
 		contentPane.add(Product_Detail_Label);
 		
 		JButton detail_180ML_button = new JButton("180 ml");
@@ -114,6 +84,9 @@ public class SelectAmount extends JFrame {
 		detail_180ML_button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				amount = "180_ml";
+				SelectTaste select_taste_page = new SelectTaste(milk_type, disinfection_type, product_form, amount);
+				select_taste_page.setVisible(true);
+				setVisible(false);
 				
 			}
 		});
@@ -124,7 +97,9 @@ public class SelectAmount extends JFrame {
 		detail_200ML_button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				amount = "200_ml";
-
+				SelectTaste select_taste_page = new SelectTaste(milk_type, disinfection_type, product_form, amount);
+				select_taste_page.setVisible(true);
+				setVisible(false);
 
 			}
 		});
@@ -136,7 +111,9 @@ public class SelectAmount extends JFrame {
 		detail_230ML_button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				amount = "230_ml";
-
+				SelectTaste select_taste_page = new SelectTaste(milk_type, disinfection_type, product_form, amount);
+				select_taste_page.setVisible(true);
+				setVisible(false);
 			}
 		});
 		
@@ -219,8 +196,15 @@ public class SelectAmount extends JFrame {
 
 			}
 		});
-		lblNewLabel.setIcon(new ImageIcon(new ImageIcon("C:\\\\Users\\\\Jajar\\\\Documents\\\\Learning\\\\SEMETIC\\\\liter.jpg").getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_DEFAULT)));
+		lblNewLabel.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\asus\\Desktop\\SEMENTIC-WEBS\\Images\\liter.jpg").getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_DEFAULT)));
+		
 
+		
+	
+		
+
+		
+		
 		
 	}
 	

@@ -1,5 +1,5 @@
 // Package 
-package main;
+package UI;
 
 //Imports
 import org.apache.jena.ontology.OntModel;

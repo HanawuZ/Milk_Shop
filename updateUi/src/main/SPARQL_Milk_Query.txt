@@ -1,0 +1,185 @@
+++++++++ Select All Milk ++++++++ 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX milk: <http://www.drink.org/milk/#>
+PREFIX milk1: <http://www.drink.org/milk/>
+
+SELECT (?milk as ?Milk) (?tasteLabel as ?Taste) (?disinfectionLabel as ?Disinfection) (?typeLabel as ?Type) (?detailLabel as ?Detail)  (?productFormLabel as ?Product_Form)
+WHERE {
+  ?x rdfs:label ?milk ;
+     milk:hasTaste ?taste;
+     milk1:hasDisinfection ?disinfection;
+     milk1:hasType ?type;
+     milk:hasProduct_Detail ?product_detail;
+     milk:hasProduct_From ?product_form.
+  ?taste rdfs:label ?tasteLabel .
+  ?disinfection rdfs:label ?disinfectionLabel.
+  ?type rdfs:label ?typeLabel.
+  ?product_detail rdfs:label ?detailLabel.
+  ?product_form rdfs:label ?productFormLabel.
+}
+
++++++++ Select Label of Milk name and Taste +++++
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX milk: <http://www.drink.org/milk/#>
+PREFIX milk1: <http://www.drink.org/milk/>
+
+SELECT (?milk as ?Milk) (?tasteLabel as ?Taste)
+WHERE {
+  ?x rdfs:label ?milk ;
+        milk:hasTaste ?taste .
+  ?taste rdfs:label ?tasteLabel .
+}
+
+++++++++ Select All Disinfection ++++++++
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX milk: <http://www.drink.org/milk/#>
+PREFIX milk1: <http://www.drink.org/milk/>
+SELECT ?disinfection
+WHERE { ?disinfection rdf:type milk:Disinfection}
+
+++++++++ Select All Type ++++++++ 
+- แสดงข้อมูลชื่อ type จะได้เป็น animal และ plant
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX milk: <http://www.drink.org/milk/#>
+PREFIX milk1: <http://www.drink.org/milk/>
+SELECT ?Type
+WHERE { ?Type rdfs:subClassOf milk:Type}
+
+////////////////////////////////////////////////////////////////////
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX milk: <http://www.drink.org/milk/#>
+PREFIX milk1: <http://www.drink.org/milk/>
+SELECT (str(?type) as ?Type)
+WHERE { ?x rdfs:subClassOf milk:Type.
+?x rdfs:label ?type.
+}
+
+////////////////////////////////////////////////////////////////////
+
+++++++++ Select All animal-based type ++++++++
+- แสดง individual ทั้งหมดที่เป็น class animal
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX milk: <http://www.drink.org/milk/#>
+PREFIX milk1: <http://www.drink.org/milk/>
+SELECT ?animal
+WHERE { ?animal rdf:type milk:animal}
+
+++++++++ Select All Plant-based type ++++++++
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX milk: <http://www.drink.org/milk/#>
+PREFIX milk1: <http://www.drink.org/milk/>
+SELECT ?plant
+WHERE { ?plant rdf:type milk:plant}
+
+++++++++ Select All Brand ++++++++
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX milk: <http://www.drink.org/milk/#>
+PREFIX milk1: <http://www.drink.org/milk/>
+SELECT ?Brand
+WHERE { ?Brand rdfs:subClassOf milk:Brand}
+
+
+++++++++ Select All Product Detail Litre ++++++++
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX milk: <http://www.drink.org/milk/#>
+PREFIX milk1: <http://www.drink.org/milk/>
+SELECT ?Volume
+WHERE { ?Volume rdf:type milk:Litre}
+
+++++++++ Select All Product Type ++++++++
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX milk: <http://www.drink.org/milk/#>
+PREFIX milk1: <http://www.drink.org/milk/>
+SELECT ?Product_Type
+WHERE { ?Product_Type rdf:type milk:Product_Type}
+
+
+++++++++ Select Specified Milk ++++++++++
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX milk: <http://www.drink.org/milk/#>
+PREFIX milk1: <http://www.drink.org/milk/>
+SELECT ?milk
+WHERE {
+	?milk rdf:type milk:meji;
+			milk1:hasType milk:cow;
+			milk:hasProduct_Detail milk:1_liter.
+}
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX milk: <http://www.drink.org/milk/#>
+PREFIX milk1: <http://www.drink.org/milk/>
+SELECT (str(?name) as ?Name)
+WHERE { ?x rdf:type milk:chitralada;
+	milk1:hasDisinfection milk:UHT;
+	milk1:hasType milk:cow;
+	milk:hasProduct_Detail milk:200_ml;
+	milk:hasProduct_From milk:box;
+	milk:hasTaste milk:nature;
+	rdfs:label ?name.	
+}
+
+##### OK ######
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX milk: <http://www.drink.org/milk/#>
+PREFIX milk1: <http://www.drink.org/milk/>
+
+SELECT (?milk as ?Milk) (?tasteLabel as ?Taste) (?disinfectionLabel as ?Disinfection) (?typeLabel as ?Type) (?detailLabel as ?Detail)  (?productFormLabel as ?Product_Form)
+WHERE {
+  ?x rdfs:label ?milk;
+     rdf:type milk:nestle;
+     milk:hasTaste ?taste;
+     milk1:hasDisinfection ?disinfection;
+     milk1:hasType ?type;
+     milk:hasProduct_Detail ?product_detail;
+     milk:hasProduct_From ?product_form.
+  ?taste rdfs:label ?tasteLabel .
+  ?disinfection rdfs:label ?disinfectionLabel.
+  ?type rdfs:label ?typeLabel.
+  ?product_detail rdfs:label ?detailLabel.
+  ?product_form rdfs:label ?productFormLabel.
+   FILTER(?taste = milk:sweet && ?disinfection = milk:UHT && ?type = milk:cow && ?product_detail = milk:200_ml && ?product_form = milk:box) 
+ 
+}

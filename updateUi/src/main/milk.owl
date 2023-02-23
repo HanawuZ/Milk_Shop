@@ -566,6 +566,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#UHT">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Disinfection"/>
+        <rdfs:label>UHT</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -574,7 +575,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#almonds">
         <rdf:type rdf:resource="http://www.drink.org/milk/#plant"/>
-        <rdfs:label>almonds</rdfs:label>
+        <rdfs:label>Almonds</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -583,6 +584,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#bottle">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Product_Type"/>
+        <rdfs:label>Bottle</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -591,6 +593,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#box">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Product_Type"/>
+        <rdfs:label>Box</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -631,7 +634,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#corn">
         <rdf:type rdf:resource="http://www.drink.org/milk/#plant"/>
-        <rdfs:label>corn</rdfs:label>
+        <rdfs:label>Corn</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -948,6 +951,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#pasteurization">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Disinfection"/>
+        <rdfs:label>Pasteurization</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -979,7 +983,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#soy">
         <rdf:type rdf:resource="http://www.drink.org/milk/#plant"/>
-        <rdfs:label>soy</rdfs:label>
+        <rdfs:label>Soy</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -988,6 +992,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#sterilization">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Disinfection"/>
+        <rdfs:label>Sterilization</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1056,7 +1061,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#wheat">
         <rdf:type rdf:resource="http://www.drink.org/milk/#plant"/>
-        <rdfs:label>wheat</rdfs:label>
+        <rdfs:label>Wheat</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1088,6 +1093,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#1_liter">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdfs:label>1 Liter</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1096,6 +1102,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#180_ml">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdfs:label>180 ML</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1104,6 +1111,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#2_liter">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdfs:label>2 Liter</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1112,6 +1120,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#200_ml">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdfs:label>200 ML</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1120,6 +1129,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#230_ml">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdfs:label>230 ML</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1128,6 +1138,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#450_ml">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdfs:label>450 ML</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1136,6 +1147,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#5_liter">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdfs:label>5 Liter</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1144,6 +1156,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.drink.org/milk/#830_ml">
         <rdf:type rdf:resource="http://www.drink.org/milk/#Litre"/>
+        <rdfs:label>830 ML</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 

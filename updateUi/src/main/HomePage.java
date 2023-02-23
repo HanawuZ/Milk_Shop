@@ -1,4 +1,4 @@
-package main;
+package UI;
 
 import java.awt.EventQueue;
 
@@ -140,18 +140,18 @@ public class HomePage extends JFrame {
 		Color bgColor = new Color(255, 255, 255, 128); // create a color with 50% opacity
 		WhiteOpacityBackground.setBackground(bgColor); // set the background color of the panel
 
-		WhiteOpacityBackground.setBounds(0, 0, 1280, 484);
+		WhiteOpacityBackground.setBounds(0, 0, 1280, 615);
 		contentPane.add(WhiteOpacityBackground);
 		
 		JLabel HomePageBackground = new JLabel("");
 		HomePageBackground.setIcon(new ImageIcon("C:\\Users\\asus\\Desktop\\SEMENTIC-WEBS\\Images\\Milk_background3.jpg"));
-		HomePageBackground.setBounds(0, 0, 1280, 484);
+		HomePageBackground.setBounds(0, 0, 1280, 615);
 
 		contentPane.add(HomePageBackground);
 		
 		JPanel FooterPanel = new JPanel();
 		FooterPanel.setBackground(Color.GRAY);
-		FooterPanel.setBounds(0,0, 1280, 720);
+		FooterPanel.setBounds(0,613, 1280, 70);
 		contentPane.add(FooterPanel);
 
 		
